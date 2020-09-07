@@ -15,7 +15,23 @@ if age >= 18:
     print('Great! Your starting Voting-Power is:', voting_power)
     print('Lets go Vote!')
 
+    voting_method = input('First and most importantly, do you want to Vote by Mail, Vote Early or Vote on Election Day (Mail/Early/Day)? ').upper()
+
+    if voting_method == 'MAIL':
+      ans = input('Complete your ballot and then sign the backside. Do you want to mail it or drop it off (Mail/Drop)? ').upper()
+
+      if ans == 'MAIL':
+        print('You mailed your ballot successfully but due to the USPS being under-funded by the Federal Governmenet it may take longer than anticipated for your ballot to arrive & be counted. Voting-Power reduced by 5.')
+        voting_power -= 5
+
+      elif ans == 'DROP':
+        print('You dropped your ballot off at the County Election Office or a Election Ballot Drop box! Congrats this the quickest and safest way to ensure your vote is counted! Voting-Power increased by 25!!')
+        voting_power += 25
+
+      else:
+        print('You lost your ballot and are unable to Vote now which means you did not perform one of your responsibilities as an American. Shame!')
     
+    else:
       print("Not a Voting option.")
   
   else:
