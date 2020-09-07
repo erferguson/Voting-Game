@@ -31,6 +31,17 @@ if age >= 18:
       else:
         print('You lost your ballot and are unable to Vote now which means you did not perform one of your responsibilities as an American. Shame!')
     
+    elif voting_method == 'EARLY':
+      ans = input('Confirm the first day you can Vote Early In-Person. Can you Vote today (Yes/No)?').upper()
+
+      if ans == 'YES':
+        print('Locate your Voting Precient, take idenfication documents and head to the polls to Vote Early! Voting-Power increased by 25!')
+        voting_power += 25
+      
+      else:
+        print('Set a reminder in your calendar for the earliest date to Vote Early. Voting-Power increased by 5.')
+        voting_power += 5
+
     else:
       print("Not a Voting option.")
   
