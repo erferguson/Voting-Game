@@ -42,6 +42,17 @@ if age >= 18:
         print('Set a reminder in your calendar for the earliest date to Vote Early. Voting-Power increased by 5.')
         voting_power += 5
 
+    elif voting_method == 'DAY':
+      ans = input('Mark the date and location of your Polling Station in your calendar. Be sure to take ID with you. There may be long wait times to Vote. Would you like to Vote Early (Yes/No)?').upper()
+
+      if ans == 'YES':
+        print('Great! Locate your Voting Precient, take identification documents and head to the polls to Vote Early! Voting-Power increased by 25!')
+        voting_power += 25
+      
+      else:
+        print('Sounds good. Fill out a EXAMPLE ballot and take it with you on Election Day to ensure a smooth process when voting.')
+        voting_power += 5
+
     else:
       print("Not a Voting option.")
   
